@@ -104,6 +104,10 @@ final class AppState: ObservableObject {
         plan          = JSONStore.load([TrainingPlanDay].self, key: StorageKeys.plan) ?? AppState.defaultPlan()
 
         ensureDailyChallengeForToday()
+        
+        if !isLoggedIn {
+            login(name: "User-\(Date().timeIntervalSince1970 / 1000)", email: "user\(Date().timeIntervalSince1970 / 1000)@mail.com")
+        }
     }
 
     // MARK: - Defaults
