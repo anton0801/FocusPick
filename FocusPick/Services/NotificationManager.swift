@@ -1,9 +1,7 @@
-//
-//  NotificationManager.swift
-//  FocusPick
-//
-
 import UserNotifications
+import Combine
+import SwiftUI
+
 
 final class NotificationManager {
     static let shared = NotificationManager()
@@ -42,6 +40,31 @@ final class NotificationManager {
             DispatchQueue.main.async {
                 completion("Pending: \(reqs.count)")
             }
+        }
+    }
+}
+
+
+final class NotificationConsentService: ConsentService {
+
+    func solicitPublisher() -> AnyPublisher<Bool, Never> {
+        return Deferred {
+            Future<Bool, Never> { promise in
+                UNUserNotificationCenter.current().requestAuthorization(
+                    options: [.alert, .sound, .badge]
+                ) { granted, _ in
+                    DispatchQueue.main.async {
+                        promise(.success(granted))
+                    }
+                }
+            }
+        }
+        .eraseToAnyPublisher()
+    }
+    
+    func arm() {
+        DispatchQueue.main.async {
+            UIApplication.shared.registerForRemoteNotifications()
         }
     }
 }

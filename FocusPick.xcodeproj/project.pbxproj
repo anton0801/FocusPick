@@ -8,11 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		8FEC44ED2FA22307006C0848 /* codemagic.yaml in Resources */ = {isa = PBXBuildFile; fileRef = 8FEC44EC2FA22302006C0848 /* codemagic.yaml */; };
+		8FEC46922FA61A63006C0848 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEC46912FA61A63006C0848 /* FirebaseCore */; };
+		8FEC46942FA61A63006C0848 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEC46932FA61A63006C0848 /* FirebaseMessaging */; };
+		8FEC46972FA61A77006C0848 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEC46962FA61A77006C0848 /* AppsFlyerLib */; };
+		8FEC47962FA8A313006C0848 /* NotificationPushService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 8FEC478F2FA8A313006C0848 /* NotificationPushService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8FEC479E2FA8A31C006C0848 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8FEC479D2FA8A31C006C0848 /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FEC47942FA8A313006C0848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F738EB02F9E791A007AA6BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FEC478E2FA8A313006C0848;
+			remoteInfo = NotificationPushService;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8FEC479B2FA8A313006C0848 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8FEC47962FA8A313006C0848 /* NotificationPushService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8F738EB82F9E791A007AA6BD /* FocusPick.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FocusPick.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FEC44EC2FA22302006C0848 /* codemagic.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = codemagic.yaml; sourceTree = "<group>"; };
+		8FEC478F2FA8A313006C0848 /* NotificationPushService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationPushService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -22,6 +52,13 @@
 				Info.plist,
 			);
 			target = 8F738EB72F9E791A007AA6BD /* FocusPick */;
+		};
+		8FEC479A2FA8A313006C0848 /* Exceptions for "NotificationPushService" folder in "NotificationPushService" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8FEC478E2FA8A313006C0848 /* NotificationPushService */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -34,6 +71,14 @@
 			path = FocusPick;
 			sourceTree = "<group>";
 		};
+		8FEC47902FA8A313006C0848 /* NotificationPushService */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8FEC479A2FA8A313006C0848 /* Exceptions for "NotificationPushService" folder in "NotificationPushService" target */,
+			);
+			path = NotificationPushService;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +86,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FEC46942FA61A63006C0848 /* FirebaseMessaging in Frameworks */,
+				8FEC46922FA61A63006C0848 /* FirebaseCore in Frameworks */,
+				8FEC46972FA61A77006C0848 /* AppsFlyerLib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FEC478C2FA8A313006C0848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FEC479E2FA8A31C006C0848 /* FirebaseMessaging in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +108,8 @@
 			children = (
 				8FEC44EC2FA22302006C0848 /* codemagic.yaml */,
 				8F738EBA2F9E791A007AA6BD /* FocusPick */,
+				8FEC47902FA8A313006C0848 /* NotificationPushService */,
+				8FEC479C2FA8A31C006C0848 /* Frameworks */,
 				8F738EB92F9E791A007AA6BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,8 +118,16 @@
 			isa = PBXGroup;
 			children = (
 				8F738EB82F9E791A007AA6BD /* FocusPick.app */,
+				8FEC478F2FA8A313006C0848 /* NotificationPushService.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8FEC479C2FA8A31C006C0848 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,20 +140,48 @@
 				8F738EB42F9E791A007AA6BD /* Sources */,
 				8F738EB52F9E791A007AA6BD /* Frameworks */,
 				8F738EB62F9E791A007AA6BD /* Resources */,
+				8FEC479B2FA8A313006C0848 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8FEC47952FA8A313006C0848 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				8F738EBA2F9E791A007AA6BD /* FocusPick */,
 			);
 			name = FocusPick;
 			packageProductDependencies = (
+				8FEC46912FA61A63006C0848 /* FirebaseCore */,
+				8FEC46932FA61A63006C0848 /* FirebaseMessaging */,
+				8FEC46962FA61A77006C0848 /* AppsFlyerLib */,
 			);
 			productName = FocusPick;
 			productReference = 8F738EB82F9E791A007AA6BD /* FocusPick.app */;
 			productType = "com.apple.product-type.application";
+		};
+		8FEC478E2FA8A313006C0848 /* NotificationPushService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FEC47972FA8A313006C0848 /* Build configuration list for PBXNativeTarget "NotificationPushService" */;
+			buildPhases = (
+				8FEC478B2FA8A313006C0848 /* Sources */,
+				8FEC478C2FA8A313006C0848 /* Frameworks */,
+				8FEC478D2FA8A313006C0848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8FEC47902FA8A313006C0848 /* NotificationPushService */,
+			);
+			name = NotificationPushService;
+			packageProductDependencies = (
+				8FEC479D2FA8A31C006C0848 /* FirebaseMessaging */,
+			);
+			productName = NotificationPushService;
+			productReference = 8FEC478F2FA8A313006C0848 /* NotificationPushService.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -102,6 +196,9 @@
 					8F738EB72F9E791A007AA6BD = {
 						CreatedOnToolsVersion = 16.4;
 					};
+					8FEC478E2FA8A313006C0848 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 				};
 			};
 			buildConfigurationList = 8F738EB32F9E791A007AA6BD /* Build configuration list for PBXProject "FocusPick" */;
@@ -113,12 +210,17 @@
 			);
 			mainGroup = 8F738EAF2F9E791A007AA6BD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8FEC46902FA61A63006C0848 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				8FEC46952FA61A77006C0848 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F738EB92F9E791A007AA6BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				8F738EB72F9E791A007AA6BD /* FocusPick */,
+				8FEC478E2FA8A313006C0848 /* NotificationPushService */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +234,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FEC478D2FA8A313006C0848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -142,7 +251,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8FEC478B2FA8A313006C0848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FEC47952FA8A313006C0848 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FEC478E2FA8A313006C0848 /* NotificationPushService */;
+			targetProxy = 8FEC47942FA8A313006C0848 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8F738EC22F9E791C007AA6BD /* Debug */ = {
@@ -270,7 +394,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusPick/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Focus Pick";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow to use feature in application.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Focus Pick leverages short-lived, context-free device inputs to fine-tune responsiveness, verify feature behavior, and maintain a smooth experience. These inputs are processed in a privacy-first manner, exist only during active use, and are not retained, associated with a user identity, or used beyond the app. They are never applied to cross-app tracking or shared with third parties for marketing or advertising.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -285,7 +411,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pickfocc.FocusPick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -310,7 +436,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FocusPick/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Focus Pick";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Allow to use feature in application.";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "Focus Pick leverages short-lived, context-free device inputs to fine-tune responsiveness, verify feature behavior, and maintain a smooth experience. These inputs are processed in a privacy-first manner, exist only during active use, and are not retained, associated with a user identity, or used beyond the app. They are never applied to cross-app tracking or shared with third parties for marketing or advertising.";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -325,7 +453,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.3;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.pickfocc.FocusPick;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -336,6 +464,67 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.5;
+			};
+			name = Release;
+		};
+		8FEC47982FA8A313006C0848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationPushService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationPushService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pickfocc.FocusPick.NotificationPushService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FEC47992FA8A313006C0848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationPushService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationPushService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pickfocc.FocusPick.NotificationPushService;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -360,7 +549,58 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		8FEC47972FA8A313006C0848 /* Build configuration list for PBXNativeTarget "NotificationPushService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FEC47982FA8A313006C0848 /* Debug */,
+				8FEC47992FA8A313006C0848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8FEC46902FA61A63006C0848 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.12.1;
+			};
+		};
+		8FEC46952FA61A77006C0848 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8FEC46912FA61A63006C0848 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FEC46902FA61A63006C0848 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		8FEC46932FA61A63006C0848 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FEC46902FA61A63006C0848 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8FEC46962FA61A77006C0848 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FEC46952FA61A77006C0848 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+		8FEC479D2FA8A31C006C0848 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FEC46902FA61A63006C0848 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F738EB02F9E791A007AA6BD /* Project object */;
 }

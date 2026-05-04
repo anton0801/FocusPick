@@ -55,3 +55,26 @@ struct LevelSelectView: View {
         }
     }
 }
+
+
+struct OfflineView: View {
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack {
+                Color.black.ignoresSafeArea()
+                
+                Image("main_bg")
+                    .resizable().scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .ignoresSafeArea()
+                    .blur(radius: 10)
+                    .opacity(0.6)
+                
+                Image("error")
+                    .resizable()
+                    .frame(width: 250, height: 220)
+            }
+        }
+        .ignoresSafeArea()
+    }
+}
